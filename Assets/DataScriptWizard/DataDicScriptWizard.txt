@@ -1,0 +1,15 @@
+static Dictionary<string, {0}> m_{1}Dic;
+public static Dictionary<string, {0}> {1}Dic
+{{
+    get
+    {{
+        if (m_{1}Dic == null)
+        {{
+            m_{1}Dic = new Dictionary<string, {0}>();
+            var data = Resources.LoadAll<{0}>("{2}");
+            foreach (var v in data)
+                m_{1}Dic.Add(v.name, v);
+        }}
+        return m_{1}Dic;
+    }}
+}}
