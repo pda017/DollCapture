@@ -1,0 +1,15 @@
+static List<{0}> m_{1}List;
+public static List<{0}> {1}List
+{{
+    get
+    {{
+        if (m_{1}List == null)
+        {{
+            m_{1}List = new List<{0}>();
+            var data = Resources.LoadAll<{0}>("{2}");
+            foreach (var v in data)
+                m_{1}List.Add(v);
+        }}
+        return m_{1}List;
+    }}
+}}

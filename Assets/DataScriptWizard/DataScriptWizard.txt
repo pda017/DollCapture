@@ -1,0 +1,10 @@
+static {0} m_{1};
+public static {0} {1}
+{{
+    get
+    {{
+        if (m_{1} == null)
+            m_{1} = Resources.Load<{0}>("{2}");
+        return m_{1};
+    }}
+}}
