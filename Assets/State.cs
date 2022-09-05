@@ -8,6 +8,7 @@ public enum StateEnum : byte
     Up,
     Down,
     Stop,
+    Grab,
 }
 public class State : MonoBehaviour
 {
