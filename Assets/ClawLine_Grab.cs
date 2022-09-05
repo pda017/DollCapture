@@ -2,50 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClawLine_Down : MonoBehaviour
+public class ClawLine_Grab : MonoBehaviour
 {
     ClawGrab m_ClawGrab;
-    GameObject m_Owner;
+    IsGrabbed m_IsGrabbed;
     FSM m_FSM;
-    ArcadeCase_Line m_Line;
-    CheckColCadeFloor m_CheckColCadeFloor;
-    CheckDollCol m_CheckDollCol;
-    
+    GameObject m_Owner;
+    WaitTime m_WaitTime;
     // Start is called before the first frame update
     void Start()
     {
-        m_CheckColCadeFloor = new CheckColCadeFloor();
         m_Owner = GetComponentInParent<Owner>().m_Value;
         m_FSM = new FSM(m_Owner);
-        m_Line = m_Owner.GetComponent<ArcadeCase_Line>();
-        m_CheckDollCol = new CheckDollCol();
         m_ClawGrab = m_Owner.GetComponentInChildren<ClawGrab>();
+        m_IsGrabbed = m_Owner.GetComponentInChildren<IsGrabbed>();
+        m_WaitTime = new WaitTime();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (m_FSM.Begin(StateEnum.Down))
+        if (m_FSM.Begin(StateEnum.Grab))
         {
             if (m_FSM.BeginNumState(0))
             {
-                m_ClawGrab.m_Value = false;
+                m_ClawGrab.m_Value = true;
                 m_ClawGrab.m_Dirty++;
-                m_CheckDollCol.Check();
-                m_CheckColCadeFloor.Check();
+                m_WaitTime.Start();
                 m_FSM.NextNumState();
             }
             else if (m_FSM.BeginNumState(1))
             {
-                m_Line.Down();
-                if (m_CheckColCadeFloor.Check())
+                if (m_IsGrabbed.m_Value && m_WaitTime.End(2))
                 {
                     m_FSM.SetState(StateEnum.Up);
-                    return;
-                }
-                if (m_CheckDollCol.Check())
-                {
-                    m_FSM.SetState(StateEnum.Grab);
                     return;
                 }
             }

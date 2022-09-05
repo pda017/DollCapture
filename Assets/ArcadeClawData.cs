@@ -3,6 +3,16 @@ using UnityEngine;
 
 public class ArcadeClawData
 {
+    static Data_Float m_DownDirty;
+    public static Data_Float DownDirty
+    {
+        get
+        {
+            if (m_DownDirty == null)
+                m_DownDirty = Resources.Load<Data_Float>("Data/ArcadeClaw/DownDirty");
+            return m_DownDirty;
+        }
+    }
     static Data_Float m_DollColDirty;
     public static Data_Float DollColDirty
     {
