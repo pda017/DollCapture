@@ -8,6 +8,9 @@ public class ClawLine_Idle : MonoBehaviour
     GameObject m_Owner;
     ArcadeCase_Line m_Line;
     CheckClawDown m_CheckClawDown;
+    IsGrabbed m_IsGrabbed;
+    ClawGrab m_ClawGrab;
+    ClawAutoMove m_ClawAutoMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +18,9 @@ public class ClawLine_Idle : MonoBehaviour
         m_FSM = new FSM(m_Owner);
         m_Line = m_Owner.GetComponent<ArcadeCase_Line>();
         m_CheckClawDown = new CheckClawDown();
+        m_IsGrabbed = m_Owner.GetComponentInChildren<IsGrabbed>();
+        m_ClawGrab = m_Owner.GetComponentInChildren<ClawGrab>();
+        m_ClawAutoMove = m_Owner.GetComponentInParent<ClawAutoMove>();
     }
 
     // Update is called once per frame
@@ -24,6 +30,13 @@ public class ClawLine_Idle : MonoBehaviour
         {
             if (m_FSM.BeginNumState(0))
             {
+                m_ClawAutoMove.m_Value = false;
+                m_ClawAutoMove.m_Dirty++;
+                if (!m_IsGrabbed.m_Value)
+                {
+                    m_ClawGrab.m_Value = false;
+                    m_ClawGrab.m_Dirty++;
+                }
                 m_CheckClawDown.Check();
                 m_FSM.NextNumState();
             }
