@@ -217,6 +217,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Char_Hair_021
+    second: {fileID: 2100000, guid: 5cf978536df66c944adcf4dc03c8017b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Char_Hat_001
     second: {fileID: 2100000, guid: cf8d7f6a00965e24f85fd014c0b24a9e, type: 2}
   - first:
@@ -234,6 +239,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Char_Hat_004
     second: {fileID: 2100000, guid: feb8b1c8828bf7e4f9239c4b51e10591, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Hat_005
+    second: {fileID: 2100000, guid: 8b0c957940683d04c9a1a402a372e6fa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
