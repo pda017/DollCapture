@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArcadeCase_Holder : MonoBehaviour
+public class ArcadeCase_ClawFrame : MonoBehaviour
 {
     Transform m_Tf;
     State m_LineState;
     ClawMoveSpeed m_ClawMoveSpeed;
+    ClawPosClamp m_ClawPosClamp;
     ClawAutoMove m_ClawAutoMove;
     ClawDest m_ClawDest;
-    ClawPosClamp m_ClawPosClamp;
     // Start is called before the first frame update
     void Start()
     {
         m_ClawDest = GetComponentInParent<ClawDest>();
-        m_ClawAutoMove = GetComponentInParent<ClawAutoMove>();
         m_Tf = transform;
         m_LineState = GetComponentInChildren<ClawLineTag>().GetComponent<State>();
         m_ClawMoveSpeed = GetComponentInParent<ClawMoveSpeed>();
         m_ClawPosClamp = new ClawPosClamp(gameObject);
+        m_ClawAutoMove = GetComponentInParent<ClawAutoMove>();
     }
 
     // Update is called once per frame
@@ -29,8 +29,8 @@ public class ArcadeCase_Holder : MonoBehaviour
             var look = m_ClawDest.m_Value - m_Tf.position;
             look.y = 0;
             var dir = look.normalized;
-            m_Tf.Translate(dir.x * m_ClawMoveSpeed.m_Value * Time.deltaTime, 0, 0, Space.World);
-            m_ClawPosClamp.ClampX();
+            m_Tf.Translate(0,0,dir.z * m_ClawMoveSpeed.m_Value * Time.deltaTime, Space.World);
+            m_ClawPosClamp.ClampZ();
             return;
         }
 
@@ -39,10 +39,10 @@ public class ArcadeCase_Holder : MonoBehaviour
 
         if (MoveStickData.IsTouch.m_Value)
         {
-            m_Tf.Translate(MoveStickData.DirXZ.m_Value.x * m_ClawMoveSpeed.m_Value * MoveStickData.MoveSpeedRate.m_Value * Time.deltaTime
-                , 0, 0, Space.World);
+            m_Tf.Translate(0,0
+                ,MoveStickData.DirXZ.m_Value.z * m_ClawMoveSpeed.m_Value * MoveStickData.MoveSpeedRate.m_Value * Time.deltaTime
+                ,Space.World);
         }
-
-        m_ClawPosClamp.ClampX();
+        m_ClawPosClamp.ClampZ();
     }
 }

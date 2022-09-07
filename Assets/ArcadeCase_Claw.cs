@@ -7,11 +7,9 @@ public class ArcadeCase_Claw : MonoBehaviour
     ClawGrab m_ClawGrab;
     GrabAngle m_GrabAngle;
     HingeJoint m_HingeJoint;
-    GrabSpeed m_GrabSpeed;
     int m_NumState = 0;
     private void Start()
     {
-        m_GrabSpeed = GetComponentInParent<GrabSpeed>();
         m_HingeJoint = GetComponent<HingeJoint>();
         m_GrabAngle = GetComponentInParent<GrabAngle>();
         m_ClawGrab = GetComponentInParent<ClawGrab>();
@@ -20,10 +18,9 @@ public class ArcadeCase_Claw : MonoBehaviour
     {
         var spring = m_HingeJoint.spring;
         if (m_ClawGrab.m_Value)
-            spring.targetPosition += m_GrabSpeed.m_Value * Time.deltaTime;
+            spring.targetPosition = m_GrabAngle.m_GrabAngle;
         else
-            spring.targetPosition -= m_GrabSpeed.m_Value * Time.deltaTime;
-        spring.targetPosition = Mathf.Clamp(spring.targetPosition, m_GrabAngle.m_ReleaseAngle, m_GrabAngle.m_GrabAngle);
+            spring.targetPosition = m_GrabAngle.m_ReleaseAngle;
         m_HingeJoint.spring = spring;
     }
     private void OnCollisionStay(Collision collision)

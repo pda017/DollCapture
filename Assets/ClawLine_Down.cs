@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class ClawLine_Down : MonoBehaviour
 {
-    ClawGrab m_ClawGrab;
     GameObject m_Owner;
     FSM m_FSM;
     ArcadeCase_Line m_Line;
     CheckColCadeFloor m_CheckColCadeFloor;
     CheckDollCol m_CheckDollCol;
-    
+    IsGrabbed m_IsGrabbed;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class ClawLine_Down : MonoBehaviour
         m_FSM = new FSM(m_Owner);
         m_Line = m_Owner.GetComponent<ArcadeCase_Line>();
         m_CheckDollCol = new CheckDollCol();
-        m_ClawGrab = m_Owner.GetComponentInChildren<ClawGrab>();
+        m_IsGrabbed = m_Owner.GetComponentInChildren<IsGrabbed>();
     }
 
     // Update is called once per frame
@@ -29,8 +28,8 @@ public class ClawLine_Down : MonoBehaviour
         {
             if (m_FSM.BeginNumState(0))
             {
-                m_ClawGrab.m_Value = false;
-                m_ClawGrab.m_Dirty++;
+                m_IsGrabbed.m_Value = false;
+                m_IsGrabbed.m_Dirty++;
                 m_CheckDollCol.Check();
                 m_CheckColCadeFloor.Check();
                 m_FSM.NextNumState();
