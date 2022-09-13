@@ -148,4 +148,7 @@ MonoBehaviour:
   - m_Key: AK_47
     m_Type: 6
     m_Prefab: AK_47
+  - m_Key: M16
+    m_Type: 6
+    m_Prefab: M16
   m_Dirty: 0
