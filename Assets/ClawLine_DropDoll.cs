@@ -20,11 +20,12 @@ public class ClawLine_DropDoll : MonoBehaviour
         m_LeftWallCol = new CheckClawLeftWallCol();
         m_BackWallCol = new CheckClawBackWallCol();
         m_Owner = GetComponentInParent<Owner>().m_Value;
+        var rootTf = m_Owner.GetComponentInParent<RootTag>().transform;
         m_FSM = new FSM(m_Owner);
-        m_ClawDest = m_Owner.GetComponentInParent<ClawDest>();
-        m_ClawAutoMove = m_Owner.GetComponentInParent<ClawAutoMove>();
+        m_ClawDest = rootTf.GetComponentInChildren<ClawDest>();
+        m_ClawAutoMove = rootTf.GetComponentInChildren<ClawAutoMove>();
         m_DollDropPos = Finder.FindObject("DollDropPos").transform;
-        m_ClawGrab = m_Owner.GetComponentInChildren<ClawGrab>();
+        m_ClawGrab = rootTf.GetComponentInChildren<ClawGrab>();
     }
 
     // Update is called once per frame
@@ -60,7 +61,7 @@ public class ClawLine_DropDoll : MonoBehaviour
                         var dollTf = grabDoll.transform;
                         var dollRigid = grabDoll.GetComponent<Rigidbody>();
                         dollTf.parent = null;
-                        dollRigid.isKinematic = false;
+                        //dollRigid.isKinematic = false;
                     }
                     m_WaitTime.Start();
                     m_ClawGrab.m_Value = false;
@@ -72,8 +73,6 @@ public class ClawLine_DropDoll : MonoBehaviour
             {
                 if (m_WaitTime.End(ArcadeClawData.DropTime.m_Value))
                 {
-                    m_ClawGrab.m_Value = true;
-                    m_ClawGrab.m_Dirty++;
                     m_FSM.SetState(StateEnum.Idle);
                 }
             }

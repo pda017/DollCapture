@@ -16,9 +16,10 @@ public class ClawLine_Down : MonoBehaviour
         m_CheckColCadeFloor = new CheckColCadeFloor();
         m_Owner = GetComponentInParent<Owner>().m_Value;
         m_FSM = new FSM(m_Owner);
+        var rootTf = m_Owner.GetComponentInParent<RootTag>().transform;
         m_Line = m_Owner.GetComponent<ArcadeCase_Line>();
         m_CheckDollCol = new CheckDollCol();
-        m_IsGrabbed = m_Owner.GetComponentInChildren<IsGrabbed>();
+        m_IsGrabbed = rootTf.GetComponentInChildren<IsGrabbed>();
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class ClawLine_Down : MonoBehaviour
                 m_Line.Down();
                 if (m_CheckColCadeFloor.Check())
                 {
-                    m_FSM.SetState(StateEnum.Up);
+                    m_FSM.SetState(StateEnum.Grab);
                     return;
                 }
                 if (m_CheckDollCol.Check())

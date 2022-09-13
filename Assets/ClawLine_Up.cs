@@ -12,9 +12,10 @@ public class ClawLine_Up : MonoBehaviour
     void Start()
     {
         m_Owner = GetComponentInParent<Owner>().m_Value;
+        var rootTf = m_Owner.GetComponentInParent<RootTag>().transform;
         m_FSM = new FSM(m_Owner);
         m_Line = m_Owner.GetComponent<ArcadeCase_Line>();
-        m_IsGrabbed = m_Owner.GetComponentInChildren<IsGrabbed>();
+        m_IsGrabbed = rootTf.GetComponentInChildren<IsGrabbed>();
     }
 
     // Update is called once per frame

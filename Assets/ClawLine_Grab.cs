@@ -15,15 +15,17 @@ public class ClawLine_Grab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         m_Raycast = new Raycast();
         m_Owner = GetComponentInParent<Owner>().m_Value;
+        var rootTf = m_Owner.GetComponentInParent<RootTag>().transform;
         m_FSM = new FSM(m_Owner);
-        m_ClawGrab = m_Owner.GetComponentInChildren<ClawGrab>();
-        m_GrabTime = m_Owner.GetComponentInChildren<GrabTime>();
+        m_ClawGrab = rootTf.GetComponentInChildren<ClawGrab>();
+        m_GrabTime = rootTf.GetComponentInChildren<GrabTime>();
         m_WaitTime = new WaitTime();
-        var suckPointTag = m_Owner.GetComponentInChildren<SuckPointTag>();
+        var suckPointTag = rootTf.GetComponentInChildren<SuckPointTag>();
         m_SuckPointTf = suckPointTag.transform;
-        m_IsGrabbed = m_Owner.GetComponentInChildren<IsGrabbed>();
+        m_IsGrabbed = rootTf.GetComponentInChildren<IsGrabbed>();
     }
 
     // Update is called once per frame
@@ -46,11 +48,11 @@ public class ClawLine_Grab : MonoBehaviour
                     {
                         m_IsGrabbed.m_Value = true;
                         m_IsGrabbed.m_Dirty++;
-                        var dollTf = m_Raycast.m_HitList[0].collider.transform;
-                        var dollRigid = m_Raycast.m_HitList[0].collider.GetComponent<Rigidbody>();
+                        var dollRigid = m_Raycast.m_HitList[0].collider.GetComponentInParent<Rigidbody>();
+                        var dollTf = dollRigid.transform;
                         dollTf.parent = m_SuckPointTf;
-                        dollRigid.isKinematic = true;
-                        ArcadeClawData.GrabDoll_Id.m_Value = m_Raycast.m_HitList[0].collider.gameObject.GetInstanceID();
+                        //dollRigid.isKinematic = true;
+                        ArcadeClawData.GrabDoll_Id.m_Value = dollRigid.gameObject.GetInstanceID();
                     }
                     m_FSM.SetState(StateEnum.Up);
                     return;

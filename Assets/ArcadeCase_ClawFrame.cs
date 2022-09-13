@@ -13,16 +13,17 @@ public class ArcadeCase_ClawFrame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var rootTf = GetComponentInParent<RootTag>().transform;
         m_ClawDest = GetComponentInParent<ClawDest>();
         m_Tf = transform;
-        m_LineState = GetComponentInChildren<ClawLineTag>().GetComponent<State>();
+        m_LineState = rootTf.GetComponentInChildren<ClawLineTag>().GetComponent<State>();
         m_ClawMoveSpeed = GetComponentInParent<ClawMoveSpeed>();
         m_ClawPosClamp = new ClawPosClamp(gameObject);
         m_ClawAutoMove = GetComponentInParent<ClawAutoMove>();
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (m_ClawAutoMove.m_Value)
         {

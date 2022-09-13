@@ -9,12 +9,21 @@ public class ArcadeCase_Line : MonoBehaviour
     public float m_Length;
     Transform m_Tf;
     Vector3 m_OriPos;
+    Transform m_HoldTf;
     // Start is called before the first frame update
     void Start()
     {
+        var rootTf = GetComponentInParent<RootTag>().transform;
+        m_HoldTf = rootTf.GetComponentInChildren<ClawHoldTag>().transform;
         m_Tf = transform;
         m_OriPos = m_Tf.position;
         InitPos();
+    }
+    private void Update()
+    {
+        var pos = m_HoldTf.position;
+        pos.y = m_Tf.position.y;
+        m_Tf.position = pos;
     }
     public void InitPos()
     {
