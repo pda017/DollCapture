@@ -102,6 +102,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Char_Cloth_018
+    second: {fileID: 2100000, guid: f6a4a6ef3c1031e469b3400d7b892490, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Cloth_019
+    second: {fileID: 2100000, guid: 6d44633140d729c44bb71d947eee5f8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Cloth_020
+    second: {fileID: 2100000, guid: 31748e648b119bd4b8cba0bcc54bc50e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Cloth_021
+    second: {fileID: 2100000, guid: f11910823413e744896d8af707efeada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Char_Face
     second: {fileID: 2100000, guid: 736233d1f0799e742b06251d87d51ffe, type: 2}
   - first:
@@ -244,6 +264,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Char_Hat_005
     second: {fileID: 2100000, guid: 8b0c957940683d04c9a1a402a372e6fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Hat_006
+    second: {fileID: 2100000, guid: 68b6144e94398354dbcf8fc0d4047d19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Hat_007
+    second: {fileID: 2100000, guid: 7bc11474585735a48979481d0a068e3a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
