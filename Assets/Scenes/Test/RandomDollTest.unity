@@ -966,35 +966,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Gun
-      value: 
+      value: M16
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Hat
-      value: 
+      value: Hat001
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Body
-      value: 
+      value: Body001
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Hair
-      value: 
+      value: Hair004
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Head
-      value: 
+      value: Head001_03
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Cloth
-      value: 
+      value: Cloth006
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Dirty
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372256, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Glass
-      value: 
+      value: Glass01
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372257, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Dirty
@@ -1002,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372257, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_Value
-      value: 
+      value: TestPose4
       objectReference: {fileID: 0}
     - target: {fileID: 200494310777372263, guid: af295e4cafa3f2a40badaa1cebefe518, type: 3}
       propertyPath: m_RootOrder
