@@ -21,6 +21,7 @@ public class ArcadeCase_Claw : MonoBehaviour
             spring.targetPosition = m_GrabAngle.m_GrabAngle;
         else
             spring.targetPosition = m_GrabAngle.m_ReleaseAngle;
+
         m_HingeJoint.spring = spring;
     }
     private void OnCollisionStay(Collision collision)

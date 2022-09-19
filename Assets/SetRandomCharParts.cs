@@ -10,16 +10,20 @@ public class SetRandomCharParts
     }
     public void Set()
     {
-        m_CharParts.m_Body = GetRandomKey(CharPartsEnum.Body);
-        m_CharParts.m_Cloth = GetRandomKey(CharPartsEnum.Cloth);
-        m_CharParts.m_Glass = GetRandomKey(CharPartsEnum.Glass);
-        m_CharParts.m_Gun = GetRandomKey(CharPartsEnum.Gun);
-        m_CharParts.m_Hair = GetRandomKey(CharPartsEnum.Hair);
-        m_CharParts.m_Hat = GetRandomKey(CharPartsEnum.Hat);
-        m_CharParts.m_Head = GetRandomKey(CharPartsEnum.Head);
-        m_CharParts.m_Dirty++;
+        Set(m_CharParts);
     }
-    public string GetRandomKey(CharPartsEnum type)
+    public static void Set(CharParts charParts)
+    {
+        charParts.m_Value.m_Body = GetRandomKey(CharPartsEnum.Body);
+        charParts.m_Value.m_Cloth = GetRandomKey(CharPartsEnum.Cloth);
+        charParts.m_Value.m_Glass = GetRandomKey(CharPartsEnum.Glass);
+        charParts.m_Value.m_Gun = GetRandomKey(CharPartsEnum.Gun);
+        charParts.m_Value.m_Hair = GetRandomKey(CharPartsEnum.Hair);
+        charParts.m_Value.m_Hat = GetRandomKey(CharPartsEnum.Hat);
+        charParts.m_Value.m_Head = GetRandomKey(CharPartsEnum.Head);
+        charParts.m_Dirty++;
+    }
+    public static string GetRandomKey(CharPartsEnum type)
     {
         var partsList = GetCharPartsInfoByType.Get(type);
         var parts = partsList[Random.Range(0, partsList.Count)];

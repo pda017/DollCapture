@@ -13,6 +13,7 @@ public class MoveStickPanel_TouchBg : MonoBehaviour
     {
         m_Rt = transform as RectTransform;
         m_Tf = transform;
+        MoveStickData.OriRtPos.m_Value = m_Rt.anchoredPosition;
     }
 
     // Update is called once per frame

@@ -3,6 +3,26 @@ using UnityEngine;
 
 public class ArcadeClawData
 {
+    static Data_Float m_DropCheckDist;
+    public static Data_Float DropCheckDist
+    {
+        get
+        {
+            if (m_DropCheckDist == null)
+                m_DropCheckDist = Resources.Load<Data_Float>("Data/ArcadeClaw/DropCheckDist");
+            return m_DropCheckDist;
+        }
+    }
+    static Data_Float m_DropCheckRadius;
+    public static Data_Float DropCheckRadius
+    {
+        get
+        {
+            if (m_DropCheckRadius == null)
+                m_DropCheckRadius = Resources.Load<Data_Float>("Data/ArcadeClaw/DropCheckRadius");
+            return m_DropCheckRadius;
+        }
+    }
     static Data_Float m_GrabCheckDist;
     public static Data_Float GrabCheckDist
     {

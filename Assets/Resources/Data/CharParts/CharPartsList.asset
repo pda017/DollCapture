@@ -46,6 +46,39 @@ MonoBehaviour:
   - m_Key: Cloth010
     m_Type: 1
     m_Prefab: Char_Cloth_010
+  - m_Key: Cloth011
+    m_Type: 1
+    m_Prefab: Char_Cloth_011
+  - m_Key: Cloth012
+    m_Type: 1
+    m_Prefab: Char_Cloth_012
+  - m_Key: Cloth013
+    m_Type: 1
+    m_Prefab: Char_Cloth_013
+  - m_Key: Cloth014
+    m_Type: 1
+    m_Prefab: Char_Cloth_014
+  - m_Key: Cloth015
+    m_Type: 1
+    m_Prefab: Char_Cloth_015
+  - m_Key: Cloth016
+    m_Type: 1
+    m_Prefab: Char_Cloth_016
+  - m_Key: Cloth017
+    m_Type: 1
+    m_Prefab: Char_Cloth_017
+  - m_Key: Cloth018
+    m_Type: 1
+    m_Prefab: Char_Cloth_018
+  - m_Key: Cloth019
+    m_Type: 1
+    m_Prefab: Char_Cloth_019
+  - m_Key: Cloth020
+    m_Type: 1
+    m_Prefab: Char_Cloth_020
+  - m_Key: Cloth021
+    m_Type: 1
+    m_Prefab: Char_Cloth_021
   - m_Key: Glass01
     m_Type: 2
     m_Prefab: Char_Glass_001
@@ -88,6 +121,33 @@ MonoBehaviour:
   - m_Key: Hair012
     m_Type: 3
     m_Prefab: Char_Hair_012
+  - m_Key: Hair013
+    m_Type: 3
+    m_Prefab: Char_Hair_013
+  - m_Key: Hair014
+    m_Type: 3
+    m_Prefab: Char_Hair_014
+  - m_Key: Hair015
+    m_Type: 3
+    m_Prefab: Char_Hair_015
+  - m_Key: Hair016
+    m_Type: 3
+    m_Prefab: Char_Hair_016
+  - m_Key: Hair017
+    m_Type: 3
+    m_Prefab: Char_Hair_017
+  - m_Key: Hair018
+    m_Type: 3
+    m_Prefab: Char_Hair_018
+  - m_Key: Hair019
+    m_Type: 3
+    m_Prefab: Char_Hair_019
+  - m_Key: Hair020
+    m_Type: 3
+    m_Prefab: Char_Hair_020
+  - m_Key: Hair_21
+    m_Type: 3
+    m_Prefab: Char_Hair_021
   - m_Key: Hat001
     m_Type: 4
     m_Prefab: Char_Hat_001
@@ -97,6 +157,18 @@ MonoBehaviour:
   - m_Key: Hat003
     m_Type: 4
     m_Prefab: Char_Hat_003
+  - m_Key: Hat004
+    m_Type: 4
+    m_Prefab: Char_Hat_004
+  - m_Key: Hat005
+    m_Type: 4
+    m_Prefab: Char_Hat_005
+  - m_Key: Hat006
+    m_Type: 4
+    m_Prefab: Char_Hat_006
+  - m_Key: Hat007
+    m_Type: 4
+    m_Prefab: Char_Hat_007
   - m_Key: Head001_01
     m_Type: 5
     m_Prefab: Char_Head_001_01
@@ -148,7 +220,67 @@ MonoBehaviour:
   - m_Key: AK_47
     m_Type: 6
     m_Prefab: AK_47
+  - m_Key: Aks_74u
+    m_Type: 6
+    m_Prefab: Aks_74u
+  - m_Key: K1a1
+    m_Type: 6
+    m_Prefab: K1a1
+  - m_Key: K2
+    m_Type: 6
+    m_Prefab: K2
+  - m_Key: KS_23
+    m_Type: 6
+    m_Prefab: KS_23
+  - m_Key: M4_Carbin
+    m_Type: 6
+    m_Prefab: M4_Carbin
+  - m_Key: M14
+    m_Type: 6
+    m_Prefab: M14
   - m_Key: M16
     m_Type: 6
     m_Prefab: M16
+  - m_Key: M60
+    m_Type: 6
+    m_Prefab: M60
+  - m_Key: M82A1
+    m_Type: 6
+    m_Prefab: M82A1
+  - m_Key: M249
+    m_Type: 6
+    m_Prefab: M249
+  - m_Key: M870
+    m_Type: 6
+    m_Prefab: M870
+  - m_Key: M1911
+    m_Type: 6
+    m_Prefab: M1911
+  - m_Key: Makarov_PM
+    m_Type: 6
+    m_Prefab: Makarov_PM
+  - m_Key: Micro_UZI
+    m_Type: 6
+    m_Prefab: Micro_UZI
+  - m_Key: PP2000
+    m_Type: 6
+    m_Prefab: PP2000
+  - m_Key: PTRS_41
+    m_Type: 6
+    m_Prefab: PTRS_41
+  - m_Key: RPG_7
+    m_Type: 6
+    m_Prefab: RPG_7
+  - m_Key: RPK_74
+    m_Type: 6
+    m_Prefab: RPK_74
+  - m_Key: SVD
+    m_Type: 6
+    m_Prefab: SVD
+  - m_Key: Water_Gun_AR
+    m_Type: 6
+    m_Prefab: Water_Gun_AR
+  - m_Key: Water_Gun_HG
+    m_Type: 6
+    m_Prefab: Water_Gun_HG
   m_Dirty: 0

@@ -40,8 +40,9 @@ public class ArcadeCase_ClawFrame : MonoBehaviour
 
         if (MoveStickData.IsTouch.m_Value)
         {
+            var camDir = MoveStickDirToCamDir.Get();
             m_Tf.Translate(0,0
-                ,MoveStickData.DirXZ.m_Value.z * m_ClawMoveSpeed.m_Value * MoveStickData.MoveSpeedRate.m_Value * Time.deltaTime
+                , camDir.z * m_ClawMoveSpeed.m_Value * MoveStickData.MoveSpeedRate.m_Value * Time.deltaTime
                 ,Space.World);
         }
         m_ClawPosClamp.ClampZ();

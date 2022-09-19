@@ -16,13 +16,13 @@ public class RandomDollTest_RandomButton : MonoBehaviour
         m_CharPose = m_EmptyCharObj.GetComponent<CharPose>();
         ButtonEvent.AddClickEvent(gameObject, () =>
         {
-            m_CharParts.m_Body = GetRandomKey(CharPartsEnum.Body);
-            m_CharParts.m_Cloth = GetRandomKey(CharPartsEnum.Cloth);
-            m_CharParts.m_Glass = GetRandomKey(CharPartsEnum.Glass);
-            m_CharParts.m_Gun = GetRandomKey(CharPartsEnum.Gun);
-            m_CharParts.m_Hair = GetRandomKey(CharPartsEnum.Hair);
-            m_CharParts.m_Hat = GetRandomKey(CharPartsEnum.Hat);
-            m_CharParts.m_Head = GetRandomKey(CharPartsEnum.Head);
+            m_CharParts.m_Value.m_Body = GetRandomKey(CharPartsEnum.Body);
+            m_CharParts.m_Value.m_Cloth = GetRandomKey(CharPartsEnum.Cloth);
+            m_CharParts.m_Value.m_Glass = GetRandomKey(CharPartsEnum.Glass);
+            m_CharParts.m_Value.m_Gun = GetRandomKey(CharPartsEnum.Gun);
+            m_CharParts.m_Value.m_Hair = GetRandomKey(CharPartsEnum.Hair);
+            m_CharParts.m_Value.m_Hat = GetRandomKey(CharPartsEnum.Hat);
+            m_CharParts.m_Value.m_Head = GetRandomKey(CharPartsEnum.Head);
             m_CharParts.m_Dirty++;
             if (m_PoseIndex >= CharPoseData.PoseList.m_Value.Count)
                 m_PoseIndex = 0;
