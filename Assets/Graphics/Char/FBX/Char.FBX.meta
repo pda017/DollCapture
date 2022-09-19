@@ -122,6 +122,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Char_Cloth_022
+    second: {fileID: 2100000, guid: c281a5db386f5d5499e9760f4e9b847d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Char_Face
     second: {fileID: 2100000, guid: 736233d1f0799e742b06251d87d51ffe, type: 2}
   - first:
