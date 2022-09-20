@@ -9,6 +9,7 @@ public class ClawLine_Grab : MonoBehaviour
     FSM m_FSM;
     GameObject m_Owner;
     WaitTime m_WaitTime;
+    SetClawLayer m_SetClawLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class ClawLine_Grab : MonoBehaviour
         m_ClawGrab = rootTf.GetComponentInChildren<ClawGrab>();
         m_GrabTime = rootTf.GetComponentInChildren<GrabTime>();
         m_WaitTime = new WaitTime();
+        m_SetClawLayer = new SetClawLayer(m_Owner);
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class ClawLine_Grab : MonoBehaviour
         {
             if (m_FSM.BeginNumState(0))
             {
+                m_SetClawLayer.Set("IgnoreFloor");
                 m_ClawGrab.m_Value = true;
                 m_ClawGrab.m_Dirty++;
                 m_WaitTime.Start();

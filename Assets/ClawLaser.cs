@@ -8,6 +8,7 @@ public class ClawLaser : MonoBehaviour
     Transform m_Tf;
     MeshRenderer m_Mr;
     State m_LineState;
+    Transform m_Parent;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class ClawLaser : MonoBehaviour
         m_LineState = clawLineTag.GetComponent<State>();
         m_Mr = GetComponent<MeshRenderer>();
         m_Tf = transform;
+        m_Parent = transform.parent;
         m_Raycast = new Raycast();
     }
 
@@ -25,15 +27,15 @@ public class ClawLaser : MonoBehaviour
         if (m_LineState.m_Value == StateEnum.Idle)
         {
             m_Mr.enabled = true;
-            if (m_Raycast.Check(m_Tf.position, Vector3.down, 1, LayerData.CaseFloor.m_Value | LayerData.Doll.m_Value))
+            if (m_Raycast.Check(m_Parent.position, Vector3.down, 2, LayerData.CaseFloor.m_Value | LayerData.Doll.m_Value))
             {
                 var hit = m_Raycast.m_HitList[0];
                 var dist = hit.distance;
                 var lineDist = m_Mr.bounds.size.y;
                 var dt = dist / lineDist;
-                var scale = m_Tf.localScale;
+                var scale = m_Parent.localScale;
                 scale.y *= dt;
-                m_Tf.localScale = scale;
+                m_Parent.localScale = scale;
             }
         }
         else
