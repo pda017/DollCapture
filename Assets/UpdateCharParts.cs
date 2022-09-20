@@ -9,15 +9,17 @@ public class UpdateCharParts : MonoBehaviour
     CharParts m_CharParts;
     Transform m_Tf;
     SkinnedMeshRenderer m_BaseMesh;
+    IsIcon m_IsIcon;
     // Start is called before the first frame update
     void Start()
     {
+        m_IsIcon = GetComponentInParent<IsIcon>();
         m_Tf = transform;
         m_CharParts = GetComponentInParent<CharParts>();
         m_CharPartsType = GetComponent<CharPartsType>();
         m_CharPartsChanged = new CharPartsChanged(gameObject);
-        var anim = GetComponentInParent<Animator>();
-        var baseBodyTag = anim.GetComponentInChildren<BaseBodyTag>();
+        var rootTag = GetComponentInParent<RootTag>();
+        var baseBodyTag = rootTag.GetComponentInChildren<BaseBodyTag>();
         m_BaseMesh = baseBodyTag.GetComponent<SkinnedMeshRenderer>();
     }
 
@@ -62,10 +64,16 @@ public class UpdateCharParts : MonoBehaviour
     }
     void DestroyChild()
     {
+        bool isIcon = false;
+        if (m_IsIcon != null && m_IsIcon.m_Value)
+            isIcon = true;
         for (int i = 0; i < m_Tf.childCount; i++)
         {
             var child = m_Tf.GetChild(i);
-            Destroy(child.gameObject);
+            if (isIcon)
+                DestroyImmediate(child.gameObject);
+            else
+                Destroy(child.gameObject);
         }
     }
 }

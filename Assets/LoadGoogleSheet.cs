@@ -7,6 +7,7 @@ public class LoadGoogleSheet
     public static void LoadAll()
     {
         LoadSheet("1KEy7DpaaEJbcVygtShBJvh47R6qY0ziWp7gVJLUy07Q", "0"); //PartsTable
+        LoadSheet("1vWmvHNupDyE24x_uGSPwhaf5yt3rupnu8NoqTYyhcSk", "0"); //ItemTable
     }
     public static void LoadSheet(string docid, string gid)
     {

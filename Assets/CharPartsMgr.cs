@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharPartsMgr : MonoBehaviour
 {
-    static string m_CharPrefab = "BaseChar";
     Dictionary<string, GameObject> m_Dic = new Dictionary<string, GameObject>();
     static CharPartsMgr m_Inst;
     public static CharPartsMgr GetInst()
@@ -16,7 +15,7 @@ public class CharPartsMgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var baseObj = PrefabMgr.Get(m_CharPrefab);
+        var baseObj = PrefabMgr.Get(CharPartsData.BaseCharPrefab.m_Value);
         var partsTypes = baseObj.GetComponentsInChildren<CharPartsType>();
         foreach (var partsType in partsTypes)
         {

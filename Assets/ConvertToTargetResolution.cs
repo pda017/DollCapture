@@ -9,4 +9,8 @@ public class ConvertToTargetResolution
         float ratio = value / Screen.height;
         return SystemData.TargetResolution.m_Value.y * ratio;
     }
+    public static Vector3 Convert(Vector3 value)
+    {
+        return new Vector3(Convert(value.x), Convert(value.y), Convert(value.z));
+    }
 }

@@ -41,7 +41,8 @@ public class ArcadeCase_Holder : MonoBehaviour
 
         if (MoveStickData.IsTouch.m_Value)
         {
-            m_Tf.Translate(MoveStickData.DirXZ.m_Value.x * m_ClawMoveSpeed.m_Value * MoveStickData.MoveSpeedRate.m_Value * Time.deltaTime
+            var camDir = MoveStickDirToCamDir.Get();
+            m_Tf.Translate(camDir.x * m_ClawMoveSpeed.m_Value * MoveStickData.MoveSpeedRate.m_Value * Time.deltaTime
                 , 0, 0, Space.World);
         }
 

@@ -8,14 +8,19 @@ public class ClawLine_DropDoll : MonoBehaviour
     FSM m_FSM;
     CheckClawLeftWallCol m_LeftWallCol;
     CheckClawBackWallCol m_BackWallCol;
-    ClawGrab m_ClawGrab;
     WaitTime m_WaitTime;
     Transform m_DollDropPos;
     ClawDest m_ClawDest;
     ClawAutoMove m_ClawAutoMove;
+    ClawGrabRelease m_ClawGrabRelease;
+    OverlapSphere m_OverlapSphere;
+    Transform m_SuckPointTf;
+    DollToDropDoll m_DollToDropDoll;
+    bool m_bSuccess;
     // Start is called before the first frame update
     void Start()
     {
+        m_OverlapSphere = new OverlapSphere();
         m_WaitTime = new WaitTime();
         m_LeftWallCol = new CheckClawLeftWallCol();
         m_BackWallCol = new CheckClawBackWallCol();
@@ -25,7 +30,9 @@ public class ClawLine_DropDoll : MonoBehaviour
         m_ClawDest = rootTf.GetComponentInChildren<ClawDest>();
         m_ClawAutoMove = rootTf.GetComponentInChildren<ClawAutoMove>();
         m_DollDropPos = Finder.FindObject("DollDropPos").transform;
-        m_ClawGrab = rootTf.GetComponentInChildren<ClawGrab>();
+        m_ClawGrabRelease = new ClawGrabRelease(m_Owner);
+        m_SuckPointTf = rootTf.GetComponentInChildren<SuckPointTag>().transform;
+        m_DollToDropDoll = new DollToDropDoll();
     }
 
     // Update is called once per frame
@@ -35,6 +42,7 @@ public class ClawLine_DropDoll : MonoBehaviour
         {
             if (m_FSM.BeginNumState(0))
             {
+                m_bSuccess = false;
                 m_ClawAutoMove.m_Value = true;
                 m_ClawAutoMove.m_Dirty++;
                 m_ClawDest.m_Value = m_DollDropPos.position;
@@ -55,17 +63,27 @@ public class ClawLine_DropDoll : MonoBehaviour
             {
                 if (m_WaitTime.End(ArcadeClawData.DropReadyTime.m_Value))
                 {
-                    var grabDoll = InstMgr.Get(ArcadeClawData.GrabDoll_Id.m_Value);
-                    if (grabDoll != null)
+                    var hitList = m_OverlapSphere.Check(m_SuckPointTf.position + new Vector3(0, -ArcadeClawData.DropCheckDist.m_Value)
+                        , ArcadeClawData.DropCheckRadius.m_Value, LayerData.Doll.m_Value);
+
+                    if (hitList.Count != 0)
                     {
-                        var dollTf = grabDoll.transform;
-                        var dollRigid = grabDoll.GetComponent<Rigidbody>();
-                        dollTf.parent = null;
-                        //dollRigid.isKinematic = false;
+                        hitList.ForEach(v =>
+                        {
+                            var rigid = v.GetComponentInParent<Rigidbody>();
+                            m_DollToDropDoll.Set(rigid);
+                        });
+                        m_bSuccess = true;
                     }
+
+                    if (!m_bSuccess)
+                    {
+                        PanelMgr.HideCanvas("ControllerPanel");
+                        PanelMgr.ShowCanvas("RetryPanel");
+                    }
+
+                    m_ClawGrabRelease.Set();
                     m_WaitTime.Start();
-                    m_ClawGrab.m_Value = false;
-                    m_ClawGrab.m_Dirty++;
                     m_FSM.NextNumState();
                 }
             }

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test/RandomDollTest.unity
-    guid: f3edf0d8e2442c94f99a8e10d4c95a42
+    path: Assets/Scenes/GameScene.unity
+    guid: 1fd0daf2b00ba704f9db137b60caa075
+  - enabled: 1
+    path: Assets/Scenes/Diorama.unity
+    guid: ce3b50be1fabf47458df527d72eda597
+  - enabled: 1
+    path: Assets/Scenes/Test/ScreenShotTest.unity
+    guid: 2a9f18589a43a2540881b32dd63cb527
   m_configObjects: {}
