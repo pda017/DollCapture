@@ -289,6 +289,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Char_Hat_007
     second: {fileID: 2100000, guid: 7bc11474585735a48979481d0a068e3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Char_Hat_008
+    second: {fileID: 2100000, guid: f9b3584259be4434abf57a2b34819fe3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
