@@ -1932,6 +1932,7 @@ GameObject:
   - component: {fileID: 5680676548352757279}
   - component: {fileID: 4932953756941400248}
   - component: {fileID: -8101257149199589143}
+  - component: {fileID: 4070684894330759413}
   m_Layer: 8
   m_Name: BaseChar
   m_TagString: Doll
@@ -2021,6 +2022,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d54fffae20b137419a96bbb7b111a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4070684894330759413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008541785968403925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8481f9e2ef1b749a603e283426096a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8064261013286158137

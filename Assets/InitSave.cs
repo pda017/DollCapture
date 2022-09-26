@@ -7,5 +7,9 @@ public class InitSave
     {
         InvenData.Coin.m_Value = 0;
         InvenData.Token.m_Value = 0;
+        ItemData.ItemList.m_Value.ForEach(v =>
+        {
+            v.m_IsCollected = false;
+        });
     }
 }

@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e83eadeb8f4784a96ec10ae9af1891, type: 3}
+  m_Name: CollectionList
+  m_EditorClassIdentifier: 
+  m_Value:
+  - m_Key: CT_Test1
+    m_ItemList:
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test2
+    m_ItemList:
+    - IT_Test2
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test3
+    m_ItemList:
+    - IT_Test3
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test4
+    m_ItemList:
+    - IT_Test4
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test5
+    m_ItemList:
+    - IT_Test5
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test6
+    m_ItemList:
+    - IT_Test6
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test7
+    m_ItemList:
+    - IT_Test7
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test8
+    m_ItemList:
+    - IT_Test8
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test9
+    m_ItemList:
+    - IT_Test9
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test10
+    m_ItemList:
+    - IT_Test10
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test11
+    m_ItemList:
+    - IT_Test11
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test12
+    m_ItemList:
+    - IT_Test12
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test13
+    m_ItemList:
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test14
+    m_ItemList:
+    - IT_Test2
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test15
+    m_ItemList:
+    - IT_Test3
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test16
+    m_ItemList:
+    - IT_Test4
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test17
+    m_ItemList:
+    - IT_Test5
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test18
+    m_ItemList:
+    - IT_Test6
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test19
+    m_ItemList:
+    - IT_Test7
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test20
+    m_ItemList:
+    - IT_Test8
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  - m_Key: CT_Test21
+    m_ItemList:
+    - IT_Test9
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test2
+  m_Dirty: 0

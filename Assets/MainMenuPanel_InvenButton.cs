@@ -9,6 +9,8 @@ public class MainMenuPanel_InvenButton : MonoBehaviour
     {
         ButtonEvent.AddClickEvent(gameObject, () =>
         {
+            InvenData.SellAllMode.m_Value = false;
+            InvenData.SellAllMode.m_Dirty++;
             PanelMgr.ShowCanvas("InvenPanel");
         });
     }

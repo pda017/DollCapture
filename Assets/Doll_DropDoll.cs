@@ -9,6 +9,7 @@ public class Doll_DropDoll : MonoBehaviour
     Transform m_DropDollPos;
     Rigidbody m_Rigid;
     Transform m_Tf;
+    ItemKey m_ItemKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class Doll_DropDoll : MonoBehaviour
         m_DropDollPos = Finder.FindObject("DollDropPos").transform;
         m_Rigid = m_Owner.GetComponent<Rigidbody>();
         m_Tf = m_Owner.transform;
+        m_ItemKey = m_Owner.GetComponent<ItemKey>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,13 @@ public class Doll_DropDoll : MonoBehaviour
                 m_Rigid.velocity = vel;
                 if (m_Tf.position.y < m_DropDollPos.position.y)
                 {
+                    var itemInfo = GetItemInfo.Get(m_ItemKey.m_Value);
+                    itemInfo.m_IsCollected = true;
+                    ItemData.ItemList.m_Dirty++;
+                    InvenData.Inventory.m_Value.Add(m_ItemKey.m_Value);
+                    InvenData.Inventory.m_Dirty++;
+                    ArcadeCaseData.GetItemList.m_Value.Add(m_ItemKey.m_Value);
+                    ArcadeCaseData.GetItemList.m_Dirty++;
                     Destroy(m_Owner);
                 }
             }
