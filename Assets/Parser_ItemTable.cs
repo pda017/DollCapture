@@ -48,6 +48,16 @@ public class Parser_ItemTable
                     {
                         info.m_IconPrefab = value;
                     }
+                    else if (column.CompareTo("Cost") == 0)
+                    {
+                        int v;
+                        if (int.TryParse(value, out v))
+                            info.m_Cost = v;
+                    }
+                    else if (column.CompareTo("Pose") == 0)
+                    {
+                        info.m_Pose = value;
+                    }
                     else if (column.CompareTo("Body") == 0)
                     {
                         info.m_CharParts.m_Body = value;

@@ -79,10 +79,10 @@ MonoBehaviour:
   - m_Key: Cloth021
     m_Type: 1
     m_Prefab: Char_Cloth_021
-  - m_Key: Glass01
+  - m_Key: Glass001
     m_Type: 2
     m_Prefab: Char_Glass_001
-  - m_Key: Glass02
+  - m_Key: Glass002
     m_Type: 2
     m_Prefab: Char_Glass_002
   - m_Key: Hair001
@@ -262,6 +262,9 @@ MonoBehaviour:
   - m_Key: Micro_UZI
     m_Type: 6
     m_Prefab: Micro_UZI
+  - m_Key: MP5K
+    m_Type: 6
+    m_Prefab: MP5K
   - m_Key: PP2000
     m_Type: 6
     m_Prefab: PP2000

@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class GameScene : MonoBehaviour
 {
-    SpawnRandomDoll m_SpawnRandomDoll;
+    SpawnArcadeDoll m_SpawnArcadeDoll;
     // Start is called before the first frame update
     void Start()
     {
-        m_SpawnRandomDoll = new SpawnRandomDoll();
+        InvenData.Page.m_Value = 0;
+        ArcadeCaseData.GetItemList.m_Value.Clear();
+        m_SpawnArcadeDoll = new SpawnArcadeDoll();
         PanelMgr.HideCanvasAll(PanelData.GameScene.m_Value);
         PanelMgr.ShowCanvas("MainMenuPanel");
         PanelMgr.ShowCanvas("MainUpperPanel");
 
         ClearDolls.Set();
-        m_SpawnRandomDoll.Set(10);
+        m_SpawnArcadeDoll.Set(8);
     }
 }

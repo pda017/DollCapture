@@ -91,6 +91,10 @@ public class ClawLine_DropDoll : MonoBehaviour
             {
                 if (m_WaitTime.End(ArcadeClawData.DropTime.m_Value))
                 {
+                    if (ArcadeCaseData.GetItemList.m_Value.Count != 0)
+                    {
+                        PanelMgr.ShowCanvas("GetItemPanel",true);
+                    }
                     m_FSM.SetState(StateEnum.Idle);
                 }
             }

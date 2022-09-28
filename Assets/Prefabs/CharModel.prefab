@@ -51,9 +51,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 93bd4918000d7304f8220d7d8206a60e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 369b9b4d995e5364486bdd139c1c5bdf, type: 2}
     - target: {fileID: 919132149155446097, guid: 93bd4918000d7304f8220d7d8206a60e, type: 3}
       propertyPath: m_Name
       value: M16
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 93bd4918000d7304f8220d7d8206a60e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93bd4918000d7304f8220d7d8206a60e, type: 3}
@@ -110,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8e6bcc3dbea32d943a68842a4b4e74d4, type: 3}
       propertyPath: m_Name
-      value: BaseChar
+      value: CharModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6bcc3dbea32d943a68842a4b4e74d4, type: 3}
@@ -260,13 +268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e262e4361daf85748938d06513a667d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Body: 
-  m_Cloth: 
-  m_Glass: 
-  m_Hair: 
-  m_Hat: 
-  m_Head: 
-  m_Gun: 
+  m_Value:
+    m_Body: 
+    m_Cloth: 
+    m_Glass: 
+    m_Hair: 
+    m_Hat: 
+    m_Head: 
+    m_Gun: 
   m_Dirty: 0
 --- !u!1 &4944328781469390001 stripped
 GameObject:
@@ -412,6 +421,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4e61e00ec3279c4ba0cf8bbd5f6ac36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 457d49e91015d4745b218411ffe80079, type: 2}
     - target: {fileID: 919132149155446097, guid: f4e61e00ec3279c4ba0cf8bbd5f6ac36, type: 3}
       propertyPath: m_Name
       value: AK_47

@@ -13,43 +13,554 @@ MonoBehaviour:
   m_Name: ItemList
   m_EditorClassIdentifier: 
   m_Value:
-  - m_Key: Test1
-    m_Name: Test1Name
-    m_Desc: Test1Desc
+  - m_Key: IT_Test1
+    m_Name: "\uBE0C\uC774\uD3EC\uC988 \uC218\uC544"
+    m_Desc: "\uD134\uC81C\uC804\uB7B5\uAC9C RED DAWN \uC5D0 \uB098\uC624\uB294 \uC778\uAE30
+      \uCE90\uB9AD\uD130!! \uCF00\uC774\uB77C\uC758 \uD53C\uADDC\uC5B4\uC774\uB2E4."
+    m_IsDoll: 1
     m_DollPrefab: none
-    m_IconPrefab: Icon_Test1
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose1
     m_CharParts:
       m_Body: Body001
       m_Cloth: Cloth001
-      m_Glass: Glass01
-      m_Hair: Hair001
-      m_Hat: Hat001
-      m_Head: Head001_01
-      m_Gun: AK_47
-  - m_Key: Test2
-    m_Name: Test2Name
+      m_Glass: none
+      m_Hair: Hair017
+      m_Hat: Hat002
+      m_Head: Head001_12
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test2
+    m_Name: "\uD658\uC601\uD574\uC8FC\uB294 \uC218\uC544"
     m_Desc: Test2Desc
+    m_IsDoll: 1
     m_DollPrefab: none
-    m_IconPrefab: Icon_Test2
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose2
     m_CharParts:
       m_Body: Body001
-      m_Cloth: Cloth002
-      m_Glass: Glass02
-      m_Hair: Hair002
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair017
+      m_Hat: Hat002
+      m_Head: Head001_10
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test3
+    m_Name: "\uACBD\uACC4\uADFC\uBB34\uC11C\uB294 \uC218\uC544"
+    m_Desc: Test3Desc
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose3
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair017
+      m_Hat: Hat002
+      m_Head: Head001_03
+      m_Gun: M16
+    m_IsCollected: 0
+  - m_Key: IT_Test4
+    m_Name: "\uC549\uC544\uC3F4 \uBBF8\uB098"
+    m_Desc: "\uBE0C\uB77C\uBCF4 \uBD84\uB300\uC758 \uB4E0\uB4E0\uD55C \uAE30\uAD00\uCD1D\uC0AC\uC218
+      \uBBF8\uB098\uC758 \uCE90\uB9AD\uD130\uD53C\uADDC\uC5B4\uC774\uB2E4."
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose4
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: Glass002
+      m_Hair: Hair008
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: M60
+    m_IsCollected: 0
+  - m_Key: IT_Test5
+    m_Name: "\uD798\uB4E0 \uBBF8\uB098"
+    m_Desc: "\uC5EC\uACE0\uC0DD\uC5D0\uAC8C \uC911\uAE30\uAD00\uCD1D\uCBE4\uC740
+      \uAC00\uBFD0...\uD558\uC9C0\uC54A\uC2B5\uB2C8\uB2E4."
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose5
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: Glass002
+      m_Hair: Hair008
+      m_Hat: Hat002
+      m_Head: Head001_05
+      m_Gun: M60
+    m_IsCollected: 0
+  - m_Key: IT_Test6
+    m_Name: "\uBBF8\uB098"
+    m_Desc: "\uD134\uC81C\uC804\uB7B5\uAC9C RED DAWN \uC5D0 \uB098\uC624\uB294 \uC870\uC5F0
+      \uCE90\uB9AD\uD130."
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose6
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: Glass002
+      m_Hair: Hair008
+      m_Hat: Hat002
+      m_Head: Head001_05
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test7
+    m_Name: "\uC218\uC9C0"
+    m_Desc: "\uBE0C\uB77C\uBCF4 \uBD84\uB300\uC758 \uC9C0\uC815\uC0AC\uC218 \uC218\uC9C0\uC758
+      \uCE90\uB9AD\uD130 \uD53C\uADDC\uC5B4\uC774\uB2E4."
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose7
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair014
+      m_Hat: Hat002
+      m_Head: Head001_03
+      m_Gun: M14
+    m_IsCollected: 0
+  - m_Key: IT_Test8
+    m_Name: "\uB7EC\uB2DD \uC218\uC9C0"
+    m_Desc: "\uC218\uC9C0\uC758 \uB2EC\uB9AC\uB294 \uBAA8\uC2B5 \uD53C\uADDC\uC5B4,
+      \uD55C\uC815\uD310\uC73C\uB85C \uB808\uC5B4\uB3C4\uAC00\uB192\uB2E4."
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose8
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair014
       m_Hat: Hat002
       m_Head: Head001_02
-      m_Gun: Aks_74u
-  - m_Key: Test3
-    m_Name: Test3Name
-    m_Desc: Test3Desc
+      m_Gun: M14
+    m_IsCollected: 0
+  - m_Key: IT_Test9
+    m_Name: "\uB204\uC6B4 \uC218\uC9C0"
+    m_Desc: None
+    m_IsDoll: 1
     m_DollPrefab: none
-    m_IconPrefab: Icon_Test3
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose9
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair014
+      m_Hat: Hat002
+      m_Head: Head001_02
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test10
+    m_Name: "\uB098\uB9AC"
+    m_Desc: "\uC815\uBCF4\uC804\uC5D0 \uB6F0\uC5B4\uB09C"
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose10
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: MP5K
+    m_IsCollected: 0
+  - m_Key: IT_Test11
+    m_Name: "\uB6F0\uB294 \uB098\uB9AC"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose11
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_09
+      m_Gun: MP5k
+    m_IsCollected: 0
+  - m_Key: IT_Test12
+    m_Name: "\uACBD\uB840\uD558\uB294 \uB098\uB9AC"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose12
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test13
+    m_Name: "\uC2E0\uBC1C \uACE0\uCC98\uB9E4\uB294 \uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose13
     m_CharParts:
       m_Body: Body001
       m_Cloth: Cloth003
-      m_Glass: None
-      m_Hair: Hair003
-      m_Hat: None
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_15
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test14
+    m_Name: "\uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose14
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_12
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test15
+    m_Name: "\uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose15
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_01
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test16
+    m_Name: "\uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose16
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_07
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test17
+    m_Name: "\uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose17
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_05
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test18
+    m_Name: "\uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose18
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_05
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test19
+    m_Name: "\uD2F0\uC18C\uBE0C"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose19
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_05
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test20
+    m_Name: "\uD2F0\uC18C\uBE0C \uB2EC\uB9AC\uAE30"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose20
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_09
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test21
+    m_Name: "\uCFF5\uD478\uD558\uB294 \uC0E4\uC624\uB8FD"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose21
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth002
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
       m_Head: Head001_03
-      m_Gun: K1a1
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test22
+    m_Name: "\uCFF5\uD478\uD558\uB294 \uC0E4\uC624\uB8FD"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose22
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth002
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_14
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test23
+    m_Name: "\uCFF5\uD478\uD558\uB294 \uC0E4\uC624\uB8FD"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose23
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth002
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_04
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test24
+    m_Name: "\uCFF5\uD478\uD558\uB294 \uC0E4\uC624\uB8FD"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose24
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth002
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_13
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test25
+    m_Name: "\uCF54\uC0AC\uD06C\uB304\uC2A4"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose25
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_05
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test26
+    m_Name: "\uC810\uD504"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose26
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_05
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test27
+    m_Name: "\uB3CC\uC785"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose27
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_04
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test28
+    m_Name: "\uC778\uC0AC"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose28
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth003
+      m_Glass: none
+      m_Hair: Hair001
+      m_Hat: Hat001
+      m_Head: Head001_04
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test29
+    m_Name: "\uACBD\uB840"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose12
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test30
+    m_Name: "\uACBD\uB840"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose12
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test31
+    m_Name: "\uACBD\uB840"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose12
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: none
+    m_IsCollected: 0
+  - m_Key: IT_Test32
+    m_Name: "\uACBD\uB840"
+    m_Desc: None
+    m_IsDoll: 1
+    m_DollPrefab: none
+    m_IconPrefab: none
+    m_Cost: 100
+    m_Pose: Pose12
+    m_CharParts:
+      m_Body: Body001
+      m_Cloth: Cloth001
+      m_Glass: none
+      m_Hair: Hair021
+      m_Hat: Hat002
+      m_Head: Head001_01
+      m_Gun: none
+    m_IsCollected: 0
   m_Dirty: 0

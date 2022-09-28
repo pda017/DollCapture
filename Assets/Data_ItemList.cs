@@ -18,5 +18,8 @@ public class ItemInfo
     public bool m_IsDoll;
     public string m_DollPrefab;
     public string m_IconPrefab;
+    public int m_Cost;
+    public string m_Pose;
     public CharPartsSetsInfo m_CharParts = new CharPartsSetsInfo();
+    public bool m_IsCollected;
 }
