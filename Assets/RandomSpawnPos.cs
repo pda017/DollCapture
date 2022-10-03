@@ -10,17 +10,21 @@ public class RandomSpawnPos
         var pos = GetTf();
         return pos.position;
     }
+    public void Init()
+    {
+        m_PosList.Clear();
+        var spawnBoundsTf = GetSpawnBoundsTf.Get();
+        for (int i = 0; i < spawnBoundsTf.childCount; i++)
+        {
+            m_PosList.Add(spawnBoundsTf.GetChild(i));
+        }
+        m_Index = m_PosList.Count;
+    }
     public Transform GetTf()
     {
         if (m_PosList.Count == 0)
         {
-            var spawnBoundsObj = Finder.FindObject("SpawnBounds");
-            var spawnBoundsTf = spawnBoundsObj.transform;
-            for (int i = 0; i < spawnBoundsTf.childCount; i++)
-            {
-                m_PosList.Add(spawnBoundsTf.GetChild(i));
-            }
-            m_Index = m_PosList.Count;
+            Init();
         }
 
         if (m_Index >= m_PosList.Count)

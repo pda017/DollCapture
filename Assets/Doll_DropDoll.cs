@@ -6,7 +6,6 @@ public class Doll_DropDoll : MonoBehaviour
 {
     FSM m_FSM;
     GameObject m_Owner;
-    Transform m_DropDollPos;
     Rigidbody m_Rigid;
     Transform m_Tf;
     ItemKey m_ItemKey;
@@ -15,7 +14,6 @@ public class Doll_DropDoll : MonoBehaviour
     {
         m_Owner = GetComponentInParent<Owner>().m_Value;
         m_FSM = new FSM(m_Owner);
-        m_DropDollPos = Finder.FindObject("DollDropPos").transform;
         m_Rigid = m_Owner.GetComponent<Rigidbody>();
         m_Tf = m_Owner.transform;
         m_ItemKey = m_Owner.GetComponent<ItemKey>();
@@ -32,7 +30,7 @@ public class Doll_DropDoll : MonoBehaviour
                 vel.x = 0;
                 vel.z = 0;
                 m_Rigid.velocity = vel;
-                if (m_Tf.position.y < m_DropDollPos.position.y)
+                if (m_Tf.position.y < GetDollDropPos.Get().position.y)
                 {
                     var itemInfo = GetItemInfo.Get(m_ItemKey.m_Value);
                     itemInfo.m_IsCollected = true;

@@ -29,8 +29,19 @@ public class ArcadeCase_ClawFrame : MonoBehaviour
         {
             var look = m_ClawDest.m_Value - m_Tf.position;
             look.y = 0;
+            var dist = Mathf.Abs(look.z);
             var dir = look.normalized;
-            m_Tf.Translate(0,0,dir.z * m_ClawMoveSpeed.m_Value * Time.deltaTime, Space.World);
+            var moveAmount = m_ClawMoveSpeed.m_Value * Time.deltaTime;
+            if (moveAmount >= dist)
+            {
+                ArcadeClawData.ClawOnDropPosZ.m_Value = true;
+                m_Tf.Translate(0, 0, dir.z * dist, Space.World);
+            }
+            else
+            {
+                ArcadeClawData.ClawOnDropPosZ.m_Value = false;
+                m_Tf.Translate(0, 0, dir.z * moveAmount, Space.World);
+            }
             m_ClawPosClamp.ClampZ();
             return;
         }

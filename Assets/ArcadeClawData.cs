@@ -3,6 +3,36 @@ using UnityEngine;
 
 public class ArcadeClawData
 {
+    static Data_Bool m_ClawOnDropPosZ;
+    public static Data_Bool ClawOnDropPosZ
+    {
+        get
+        {
+            if (m_ClawOnDropPosZ == null)
+                m_ClawOnDropPosZ = Resources.Load<Data_Bool>("Data/ArcadeClaw/ClawOnDropPosZ");
+            return m_ClawOnDropPosZ;
+        }
+    }
+    static Data_Bool m_ClawOnDropPosX;
+    public static Data_Bool ClawOnDropPosX
+    {
+        get
+        {
+            if (m_ClawOnDropPosX == null)
+                m_ClawOnDropPosX = Resources.Load<Data_Bool>("Data/ArcadeClaw/ClawOnDropPosX");
+            return m_ClawOnDropPosX;
+        }
+    }
+    static Data_Float m_DropBoundsClawTipColDirty;
+    public static Data_Float DropBoundsClawTipColDirty
+    {
+        get
+        {
+            if (m_DropBoundsClawTipColDirty == null)
+                m_DropBoundsClawTipColDirty = Resources.Load<Data_Float>("Data/ArcadeClaw/DropBoundsClawTipColDirty");
+            return m_DropBoundsClawTipColDirty;
+        }
+    }
     static Data_Float m_DropCheckDist;
     public static Data_Float DropCheckDist
     {

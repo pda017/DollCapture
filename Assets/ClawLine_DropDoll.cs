@@ -29,7 +29,7 @@ public class ClawLine_DropDoll : MonoBehaviour
         m_FSM = new FSM(m_Owner);
         m_ClawDest = rootTf.GetComponentInChildren<ClawDest>();
         m_ClawAutoMove = rootTf.GetComponentInChildren<ClawAutoMove>();
-        m_DollDropPos = Finder.FindObject("DollDropPos").transform;
+        m_DollDropPos = rootTf.GetComponentInChildren<DollDropPosTag>().transform;
         m_ClawGrabRelease = new ClawGrabRelease(m_Owner);
         m_SuckPointTf = rootTf.GetComponentInChildren<SuckPointTag>().transform;
         m_DollToDropDoll = new DollToDropDoll();
@@ -47,13 +47,15 @@ public class ClawLine_DropDoll : MonoBehaviour
                 m_ClawAutoMove.m_Dirty++;
                 m_ClawDest.m_Value = m_DollDropPos.position;
                 m_ClawDest.m_Dirty++;
+                CheckClawOnDropPos.Start();
                 m_LeftWallCol.Check();
                 m_BackWallCol.Check();
                 m_FSM.NextNumState();
             }
             else if (m_FSM.BeginNumState(1))
             {
-                if (m_BackWallCol.Check() || m_LeftWallCol.Check())
+                if ((m_BackWallCol.Check() && m_LeftWallCol.Check())
+                    || CheckClawOnDropPos.Check())
                 {
                     m_WaitTime.Start();
                     m_FSM.NextNumState();

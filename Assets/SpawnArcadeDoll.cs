@@ -9,7 +9,15 @@ public class SpawnArcadeDoll
     {
         m_GetRandomArcadeDoll = new GetRandomArcadeDoll();
         m_RandomSpawnPos = new RandomSpawnPos();
-        m_GetRandomArcadeDoll.SetArcade("Arcade1");
+    }
+    public void InitArcade()
+    {
+        var info = GetArcadeInfo.Get(ArcadeCaseData.SelectedArcadeIndex.m_Value);
+        if (info != null)
+        {
+            m_RandomSpawnPos.Init();
+            m_GetRandomArcadeDoll.SetArcade(info);
+        }
     }
     public void Set(int num)
     {

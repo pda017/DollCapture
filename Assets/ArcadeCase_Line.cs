@@ -11,7 +11,7 @@ public class ArcadeCase_Line : MonoBehaviour
     Vector3 m_OriPos;
     Transform m_HoldTf;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         var rootTf = GetComponentInParent<RootTag>().transform;
         m_HoldTf = rootTf.GetComponentInChildren<ClawHoldTag>().transform;

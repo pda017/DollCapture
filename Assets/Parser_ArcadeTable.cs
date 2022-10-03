@@ -34,6 +34,16 @@ public class Parser_ArcadeTable
                     {
                         info.m_Desc = value;
                     }
+                    else if (column.CompareTo("Prefab") == 0)
+                    {
+                        info.m_Prefab = value;
+                    }
+                    else if (column.CompareTo("Cost") == 0)
+                    {
+                        int v;
+                        if (int.TryParse(value, out v))
+                            info.m_Cost = v;
+                    }
                     else if (column.Contains("Item"))
                     {
                         info.m_Item.Add(value);

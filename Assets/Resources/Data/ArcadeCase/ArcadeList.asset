@@ -16,6 +16,36 @@ MonoBehaviour:
   - m_Key: Arcade1
     m_Name: "\uC544\uCF00\uC774\uB4DC1"
     m_Desc: "\uC544\uCF00\uC774\uB4DC1\uC124\uBA85"
+    m_Prefab: Claw_Machine_001
+    m_Cost: 100
+    m_Item:
+    - IT_Test1
+    - IT_Test2
+    - IT_Test3
+    - IT_Test4
+    - IT_Test5
+    - IT_Test6
+    - IT_Test7
+    - IT_Test8
+  - m_Key: Arcade2
+    m_Name: "\uC544\uCF00\uC774\uB4DC2"
+    m_Desc: "\uC544\uCF00\uC774\uB4DC2\uC124\uBA85"
+    m_Prefab: Claw_Machine_002
+    m_Cost: 100
+    m_Item:
+    - IT_Test9
+    - IT_Test10
+    - IT_Test11
+    - IT_Test12
+    - IT_Test9
+    - IT_Test9
+    - IT_Test9
+    - IT_Test9
+  - m_Key: Arcade3
+    m_Name: "\uC544\uCF00\uC774\uB4DC3"
+    m_Desc: "\uC544\uCF00\uC774\uB4DC3\uC124\uBA85"
+    m_Prefab: Claw_Machine_003
+    m_Cost: 100
     m_Item:
     - IT_Test1
     - IT_Test2

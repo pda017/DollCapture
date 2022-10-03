@@ -10,6 +10,7 @@ public class ClawLine_Down : MonoBehaviour
     CheckColCadeFloor m_CheckColCadeFloor;
     CheckDollCol m_CheckDollCol;
     IsGrabbed m_IsGrabbed;
+    CheckDropBoundsClawTipCol m_CheckDropBoundsCol;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class ClawLine_Down : MonoBehaviour
         m_Line = m_Owner.GetComponent<ArcadeCase_Line>();
         m_CheckDollCol = new CheckDollCol();
         m_IsGrabbed = rootTf.GetComponentInChildren<IsGrabbed>();
+        m_CheckDropBoundsCol = new CheckDropBoundsClawTipCol();
     }
 
     // Update is called once per frame
@@ -33,17 +35,15 @@ public class ClawLine_Down : MonoBehaviour
                 m_IsGrabbed.m_Dirty++;
                 m_CheckDollCol.Check();
                 m_CheckColCadeFloor.Check();
+                m_CheckDropBoundsCol.Check();
                 m_FSM.NextNumState();
             }
             else if (m_FSM.BeginNumState(1))
             {
                 m_Line.Down();
-                if (m_CheckColCadeFloor.Check())
-                {
-                    m_FSM.SetState(StateEnum.Grab);
-                    return;
-                }
-                if (m_CheckDollCol.Check())
+                if (m_CheckColCadeFloor.Check()
+                    || m_CheckDropBoundsCol.Check()
+                    || m_CheckDollCol.Check())
                 {
                     m_FSM.SetState(StateEnum.Grab);
                     return;

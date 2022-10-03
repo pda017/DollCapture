@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1616232898910384889}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: DollPos
-  m_TagString: Doll
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3209025513306282857}
   - component: {fileID: 387756886991530852}
   - component: {fileID: 69017202271938604}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: BaseBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6533317851124964964}
   - component: {fileID: 3392324604932646835}
   - component: {fileID: 7294748580078150052}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: BaseHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}

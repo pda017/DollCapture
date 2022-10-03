@@ -10,6 +10,7 @@ public enum StateEnum : byte
     Stop,
     Grab,
     DropDoll,
+    ModifyItem,
 }
 public class State : MonoBehaviour
 {

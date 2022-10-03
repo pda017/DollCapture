@@ -30,8 +30,19 @@ public class ArcadeCase_Holder : MonoBehaviour
         {
             var look = m_ClawDest.m_Value - m_Tf.position;
             look.y = 0;
+            var dist = Mathf.Abs(look.x);
             var dir = look.normalized;
-            m_Tf.Translate(dir.x * m_ClawMoveSpeed.m_Value * Time.deltaTime, 0, 0, Space.World);
+            var moveAmount = m_ClawMoveSpeed.m_Value * Time.deltaTime;
+            if (moveAmount >= dist)
+            {
+                ArcadeClawData.ClawOnDropPosX.m_Value = true;
+                m_Tf.Translate(dir.x * dist, 0, 0, Space.World);
+            }
+            else
+            {
+                ArcadeClawData.ClawOnDropPosX.m_Value = false;
+                m_Tf.Translate(dir.x * moveAmount, 0, 0, Space.World);
+            }
             m_ClawPosClamp.ClampX();
             return;
         }

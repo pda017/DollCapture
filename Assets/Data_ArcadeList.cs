@@ -14,5 +14,7 @@ public class ArcadeInfo
     public string m_Key;
     public string m_Name;
     public string m_Desc;
+    public string m_Prefab;
+    public int m_Cost;
     public List<string> m_Item = new List<string>();
 }

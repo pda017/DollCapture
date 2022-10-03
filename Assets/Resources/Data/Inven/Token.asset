@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc12eb5267ed14046bb76efc0fc2161d, type: 3}
   m_Name: Token
   m_EditorClassIdentifier: 
-  m_Value: 0
+  m_Value: 99999

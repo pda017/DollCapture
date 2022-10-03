@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Hair: Hair021
       m_Hat: Hat002
       m_Head: Head001_09
-      m_Gun: MP5k
+      m_Gun: MP5K
     m_IsCollected: 0
   - m_Key: IT_Test12
     m_Name: "\uACBD\uB840\uD558\uB294 \uB098\uB9AC"
@@ -496,30 +496,30 @@ MonoBehaviour:
       m_Gun: none
     m_IsCollected: 0
   - m_Key: IT_Test29
-    m_Name: "\uACBD\uB840"
+    m_Name: "\uAC38\uC6B0\uB6B1"
     m_Desc: None
     m_IsDoll: 1
     m_DollPrefab: none
     m_IconPrefab: none
     m_Cost: 100
-    m_Pose: Pose12
+    m_Pose: Pose29
     m_CharParts:
       m_Body: Body001
       m_Cloth: Cloth001
       m_Glass: none
       m_Hair: Hair021
       m_Hat: Hat002
-      m_Head: Head001_01
+      m_Head: Head001_16
       m_Gun: none
     m_IsCollected: 0
   - m_Key: IT_Test30
-    m_Name: "\uACBD\uB840"
+    m_Name: "\uB300\uAE30"
     m_Desc: None
     m_IsDoll: 1
     m_DollPrefab: none
     m_IconPrefab: none
     m_Cost: 100
-    m_Pose: Pose12
+    m_Pose: Pose30
     m_CharParts:
       m_Body: Body001
       m_Cloth: Cloth001
@@ -527,7 +527,7 @@ MonoBehaviour:
       m_Hair: Hair021
       m_Hat: Hat002
       m_Head: Head001_01
-      m_Gun: none
+      m_Gun: MP5K
     m_IsCollected: 0
   - m_Key: IT_Test31
     m_Name: "\uACBD\uB840"
@@ -536,14 +536,14 @@ MonoBehaviour:
     m_DollPrefab: none
     m_IconPrefab: none
     m_Cost: 100
-    m_Pose: Pose12
+    m_Pose: Pose31
     m_CharParts:
       m_Body: Body001
       m_Cloth: Cloth001
       m_Glass: none
       m_Hair: Hair021
       m_Hat: Hat002
-      m_Head: Head001_01
+      m_Head: Head001_05
       m_Gun: none
     m_IsCollected: 0
   - m_Key: IT_Test32
@@ -563,4 +563,4 @@ MonoBehaviour:
       m_Head: Head001_01
       m_Gun: none
     m_IsCollected: 0
-  m_Dirty: 0
+  m_Dirty: 16

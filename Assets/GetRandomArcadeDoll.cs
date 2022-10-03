@@ -8,7 +8,11 @@ public class GetRandomArcadeDoll
     ArcadeInfo m_ArcadeInfo;
     public void SetArcade(string key)
     {
-        m_ArcadeInfo = GetArcadeInfo.Get(key);
+        SetArcade(GetArcadeInfo.Get(key));
+    }
+    public void SetArcade(ArcadeInfo info)
+    {
+        m_ArcadeInfo = info;
         m_Index = 0;
         m_ItemList.Clear();
         m_ItemList.AddRange(m_ArcadeInfo.m_Item);
